@@ -1,0 +1,14 @@
+
+CREATE DATABASE IF NOT EXISTS pipeline_monitoring;
+
+
+USE pipeline_monitoring;
+
+
+CREATE TABLE IF NOT EXISTS sensor_data (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    temperature DECIMAL(5, 2),
+    pressure DECIMAL(5, 2),
+    gas DECIMAL(5, 2),
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

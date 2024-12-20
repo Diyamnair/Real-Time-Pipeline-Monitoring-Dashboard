@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipeline Monitoring Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Real-Time Pipeline Monitoring Dashboard</h1>
+    
+   
+    <div class="chart-container">
+        <h2>Temperature Monitoring</h2>
+        <p>Live data showing the temperature of the pipeline. The chart displays temperature variations over time.</p>
+        <canvas id="temperatureChart" width="400" height="200"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <h2>Pressure Monitoring</h2>
+        <p>This chart displays real-time pressure readings from the pipeline. It helps in monitoring the pipeline's structural integrity.</p>
+        <canvas id="pressureChart" width="400" height="200"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <h2>Gas Level Monitoring</h2>
+        <p>Real-time gas level monitoring within the pipeline. This chart displays gas concentration data, helping detect leaks or dangerous levels.</p>
+        <canvas id="gasChart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+</body>
+</html>
+
+
